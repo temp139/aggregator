@@ -1,36 +1,36 @@
-name: Refresh
-on:
-  # performed every two hours
-  schedule:
-    - cron: "0 */2 * * *"
-  workflow_dispatch:
+姓名: 刷新
+在:
+  # 每两小时进行一次
+  浙江:
+    - 计划任务: "0 0 */3 * *"
+  工作流程_调度:
 
-concurrency:
-  group: ${{ github.repository }}
-  cancel-in-progress: true
+随机性:
+  团体: ${{ github.repository }}
+  取消进行中: 真的
 
-env:
-  # time zone
-  TZ: Asia/Shanghai
+环境:
+  # 时区
+  TZ：亚洲/上海
 
-  # github access token
-  GIST_PAT: ${{ secrets.GIST_PAT }}
+  # github 访问令牌
+  胃肠道间质瘤_PAT: ${{ 秘密.GIST_PAT }}
 
-  # github username and gist id, separated by '/'
-  GIST_LINK: ${{ secrets.GIST_LINK }}
+  # github用户名和项目id，用分隔符分隔 '/'
+  GIST_LINK: ${{ 秘密。GIST_LINK }}
 
-  # the url to the list of airports that you maintain yourself
-  # each line include domain, coupon and invitation code, the domain must be included, and the latter two items are optional
-  CUSTOMIZE_LINK: ${{ secrets.CUSTOMIZE_LINK }}
+  # 您自己维护的机场列表的URL
+  # 每行包含域名、优惠券和邀请码，域名必须包含，后任选其一
+  CUSTOMIZE_LINK: ${{ 秘密。CUSTOMIZE_LINK }}
 
-  # include special protocols, such as vless hysteria2 and hysteria
-  ENABLE_SPECIAL_PROTOCOLS: ${{ vars.ENABLE_SPECIAL_PROTOCOLS }}
+  # 包括特殊协议，例如 vless hysteria2 和 hysteria
+  启用特殊协议: ${{ vars.ENABLE_SPECIAL_PROTOCOLS }}
 
-jobs:
-  process:
-    runs-on: ubuntu-latest
+工作机会:
+  过程:
+    连续运行: ubuntu-最新版
 
-    steps:
+    步骤:
       - name: Checkout
         uses: actions/checkout@v4
         with:
