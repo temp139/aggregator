@@ -31,13 +31,13 @@
     连续运行: ubuntu-最新版本
 
     步骤:
-      - name: Checkout
-        uses: actions/checkout@v4
-        with:
-          ref: main
+      - 姓名: 查看
+        用途: 行动/结账@v4
+        和:
+          参考: 主要的
 
-      - name: Prepare
-        uses: actions/setup-python@v5
+      - 姓名: 准备
+        用途: 操作/设置-python@v5
         with:
           python-version: "3.x"
           architecture: "x64"
